@@ -14,22 +14,22 @@ const TRUST_BADGES = [
 const CATEGORIES = [
   {
     name: "Burun Bantları",
-    image: "https://picsum.photos/seed/bantlar/400/500?blur=2",
+    image: "/images/rituel-03.jpg",
     link: "/shop/bantlar",
   },
   {
     name: "Maskeler",
-    image: "https://picsum.photos/seed/maskeler/400/500?blur=2",
+    image: "/images/rituel-04.jpg",
     link: "/shop/maskeler",
   },
   {
     name: "Mendiller",
-    image: "https://picsum.photos/seed/mendiller/400/500?blur=2",
+    image: "/images/rituel-05.jpg",
     link: "/shop/mendiller",
   },
   {
     name: "Diğer Ürünler",
-    image: "https://picsum.photos/seed/diger/400/500?blur=2",
+    image: "/images/rituel-06.jpg",
     link: "/shop/diger",
   },
 ];
@@ -40,7 +40,7 @@ const BEST_SELLERS = [
     name: "Siyah Nokta Temizleyici Burun Bandı",
     benefit: "Derinlemesine Temizlik",
     price: "₺45.00",
-    image: "https://picsum.photos/seed/burunbandi/500/500",
+    image: "/images/rituel-07.jpg",
     rating: 4.8,
   },
   {
@@ -48,7 +48,7 @@ const BEST_SELLERS = [
     name: "Yoğun Terapi Ayak Bakım Maskesi",
     benefit: "Nemlendirici & Onarıcı",
     price: "₺85.00",
-    image: "https://picsum.photos/seed/ayakmaskesi/500/500",
+    image: "/images/rituel-08.jpg",
     rating: 4.9,
   },
   {
@@ -56,7 +56,7 @@ const BEST_SELLERS = [
     name: "3D Yüz Maskesi",
     benefit: "Sıkılaştırıcı Etki",
     price: "₺65.00",
-    image: "https://picsum.photos/seed/3dmaske/500/500",
+    image: "/images/rituel-09.jpg",
     rating: 4.7,
   },
   {
@@ -64,7 +64,7 @@ const BEST_SELLERS = [
     name: "Papatya Özlü Kolajen Maske",
     benefit: "Yatıştırıcı & Canlandırıcı",
     price: "₺55.00",
-    image: "https://picsum.photos/seed/papatyamaske/500/500",
+    image: "/images/rituel-010.jpg",
     rating: 4.6,
   },
 ];
@@ -77,14 +77,12 @@ export function Home() {
       exit={{ opacity: 0 }}
       className="flex flex-col"
     >
-      {/* Hero Section */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-brand-sand px-4 md:px-8">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://picsum.photos/seed/skincare-hero/1920/1080?blur=4"
+            src="/images/rituel-01.jpg"
             alt="Hero Background"
             className="h-full w-full object-cover opacity-30"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-sand via-brand-sand/80 to-transparent" />
         </div>
@@ -125,17 +123,15 @@ export function Home() {
           <div className="relative hidden justify-center md:flex">
             <div className="relative h-[600px] w-[450px] overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="https://picsum.photos/seed/ayakmaskesi-hero/800/1200"
+                src="/images/rituel-02.jpg"
                 alt="Yoğun Terapi Ayak Bakım Maskesi"
                 className="h-full w-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges */}
       <section className="border-y border-brand-border bg-white py-12">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
@@ -156,7 +152,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Categories */}
       <section className="bg-brand-sand py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mb-12 flex items-end justify-between">
@@ -188,7 +183,6 @@ export function Home() {
                   src={category.image}
                   alt={category.name}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6">
@@ -205,7 +199,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Best Sellers */}
       <section className="bg-white py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mb-16 text-center">
@@ -228,7 +221,6 @@ export function Home() {
                     src={product.image}
                     alt={product.name}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute left-4 top-4">
                     <Badge
@@ -255,11 +247,7 @@ export function Home() {
                     <span className="text-lg font-medium text-brand-ink">
                       {product.price}
                     </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="rounded-full px-4"
-                    >
+                    <Button variant="outline" size="sm" className="rounded-full px-4">
                       Sepete Ekle
                     </Button>
                   </div>
@@ -270,25 +258,21 @@ export function Home() {
         </div>
       </section>
 
-      {/* Editorial Section */}
       <section className="bg-brand-sand py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-2xl md:order-1">
               <img
-                src="https://picsum.photos/seed/editorial/1000/800"
+                src="/images/rituel-011.jpg"
                 alt="Rituel Moments"
                 className="h-full w-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
 
             <div className="order-1 flex flex-col items-start gap-6 md:order-2 md:pl-12">
               <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
                 Bakımın <br />
-                <span className="italic text-brand-green">
-                  Ritüel Hali
-                </span>
+                <span className="italic text-brand-green">Ritüel Hali</span>
               </h2>
 
               <p className="text-lg leading-relaxed text-brand-ink/70">
