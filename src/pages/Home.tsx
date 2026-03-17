@@ -96,17 +96,17 @@ export function Home() {
               Yeni Formül
             </Badge>
 
-            <h1 className="font-serif text-5xl font-medium leading-[1.08] tracking-tight text-brand-ink md:text-7xl">
-              Yoğun Terapi <br />
-              <span className="italic text-brand-green">
-                Ayak Bakım Maskesi
-              </span>
-            </h1>
+           <h1 className="font-serif text-5xl font-medium leading-[1.08] tracking-tight text-brand-ink md:text-7xl">
+  Rahat Nefes <br />
+  <span className="italic text-brand-green">
+    Burun Bandı
+  </span>
+</h1>
 
             <p className="text-lg leading-relaxed text-brand-ink/70">
-              Kuru, yıpranmış ve sertleşmiş ayaklar için geliştirilen yoğun bakım ritüeli.
-              Sadece 20 dakikada daha yumuşak, daha pürüzsüz ve bakımlı bir görünüm.
-            </p>
+  Burun kanallarını nazikçe açarak nefes almayı kolaylaştırır.
+  Horlamayı azaltmaya yardımcı olur ve gece boyunca kesintisiz, rahat bir uyku sağlar.
+</p>
 
             <div className="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto sm:flex-row">
               <Button size="lg" className="group w-full sm:w-auto">
