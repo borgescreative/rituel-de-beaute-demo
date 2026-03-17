@@ -13,7 +13,7 @@ const TRUST_BADGES = [
 
 const CATEGORIES = [
   {
-    name: "Bantlar",
+    name: "Burun Bantları",
     image: "https://picsum.photos/seed/bantlar/400/500?blur=2",
     link: "/shop/bantlar",
   },
@@ -79,38 +79,50 @@ export function Home() {
     >
       {/* Hero Section */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-brand-sand px-4 md:px-8">
-        <div className="flex flex-col items-start gap-6 max-w-xl">
-  <Badge
-    variant="outline"
-    className="border-brand-green/20 text-brand-green bg-brand-green/5"
-  >
-    Yeni Formül
-  </Badge>
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://picsum.photos/seed/skincare-hero/1920/1080?blur=4"
+            alt="Hero Background"
+            className="h-full w-full object-cover opacity-30"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-sand via-brand-sand/80 to-transparent" />
+        </div>
 
-  <h1 className="font-serif text-5xl font-medium leading-[1.08] tracking-tight text-brand-ink md:text-7xl">
-    Yoğun Terapi <br />
-    <span className="italic text-brand-green">
-      Ayak Bakım Maskesi
-    </span>
-  </h1>
+        <div className="container relative z-10 mx-auto grid items-center gap-12 md:grid-cols-2 md:gap-8">
+          <div className="flex max-w-xl flex-col items-start gap-6">
+            <Badge
+              variant="outline"
+              className="border-brand-green/20 bg-brand-green/5 text-brand-green"
+            >
+              Yeni Formül
+            </Badge>
 
-  <p className="text-lg text-brand-ink/70 leading-relaxed">
-    Kuru, yıpranmış ve sertleşmiş ayaklar için geliştirilen yoğun bakım ritüeli.
-    Sadece 20 dakikada daha yumuşak, daha pürüzsüz ve bakımlı bir görünüm.
-  </p>
+            <h1 className="font-serif text-5xl font-medium leading-[1.08] tracking-tight text-brand-ink md:text-7xl">
+              Yoğun Terapi <br />
+              <span className="italic text-brand-green">
+                Ayak Bakım Maskesi
+              </span>
+            </h1>
 
-  <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
-    <Button size="lg" className="w-full sm:w-auto group">
-      Ürünü İncele
-      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-    </Button>
+            <p className="text-lg leading-relaxed text-brand-ink/70">
+              Kuru, yıpranmış ve sertleşmiş ayaklar için geliştirilen yoğun bakım ritüeli.
+              Sadece 20 dakikada daha yumuşak, daha pürüzsüz ve bakımlı bir görünüm.
+            </p>
 
-    <Button variant="outline" size="lg" className="w-full sm:w-auto">
-      Daha Fazla Bilgi
-    </Button>
-  </div>
-</div>
-          <div className="relative hidden md:flex justify-center">
+            <div className="flex w-full flex-col items-center gap-4 pt-4 sm:w-auto sm:flex-row">
+              <Button size="lg" className="group w-full sm:w-auto">
+                Ürünü İncele
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                Daha Fazla Bilgi
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative hidden justify-center md:flex">
             <div className="relative h-[600px] w-[450px] overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="https://picsum.photos/seed/ayakmaskesi-hero/800/1200"
@@ -145,22 +157,23 @@ export function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-24 bg-brand-sand">
+      <section className="bg-brand-sand py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mb-12 flex items-end justify-between">
             <div className="max-w-2xl">
               <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
-  Ürün Kategorileri
-</h2>
-<p className="mt-4 text-brand-ink/60">
-  Günlük bakım ritüelinize uygun ürünleri keşfedin.
-</p>
+                Ürün Kategorileri
+              </h2>
+              <p className="mt-4 text-brand-ink/60">
+                Günlük bakım ritüelinize uygun ürünleri keşfedin.
+              </p>
             </div>
+
             <Link
               to="/shop"
-              className="hidden md:flex items-center text-sm font-medium text-brand-green hover:underline underline-offset-4"
+              className="hidden items-center text-sm font-medium text-brand-green hover:underline underline-offset-4 md:flex"
             >
-              View All <ArrowRight className="ml-1 h-4 w-4" />
+              Tümünü Gör <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
 
@@ -169,7 +182,7 @@ export function Home() {
               <Link
                 key={idx}
                 to={category.link}
-                className="group relative block overflow-hidden rounded-2xl aspect-[4/5]"
+                className="group relative block aspect-[4/5] overflow-hidden rounded-2xl"
               >
                 <img
                   src={category.image}
@@ -183,7 +196,7 @@ export function Home() {
                     {category.name}
                   </h3>
                   <span className="mt-2 inline-flex items-center text-sm font-medium text-white/80 opacity-0 transition-opacity group-hover:opacity-100">
-                    Explore <ArrowRight className="ml-1 h-4 w-4" />
+                    Keşfet <ArrowRight className="ml-1 h-4 w-4" />
                   </span>
                 </div>
               </Link>
@@ -193,15 +206,15 @@ export function Home() {
       </section>
 
       {/* Best Sellers */}
-      <section className="py-24 bg-white">
+      <section className="bg-white py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mb-16 text-center">
-           <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
-  En Çok Tercih Edilenler
-</h2>
-<p className="mt-4 text-brand-ink/60">
-  Kullanıcılarımızın en çok tercih ettiği ürünler.
-</p>
+            <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
+              En Çok Tercih Edilenler
+            </h2>
+            <p className="mt-4 text-brand-ink/60">
+              Kullanıcılarımızın en çok tercih ettiği ürünler.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -217,25 +230,28 @@ export function Home() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute left-4 top-4">
                     <Badge
                       variant="secondary"
                       className="bg-white/90 text-brand-ink backdrop-blur-sm hover:bg-white"
                     >
-                      Best Seller
+                      Çok Satan
                     </Badge>
                   </div>
                 </Link>
-                <div className="flex flex-col flex-1">
-                  <span className="text-xs font-medium uppercase tracking-wider text-brand-sage mb-1">
+
+                <div className="flex flex-1 flex-col">
+                  <span className="mb-1 text-xs font-medium uppercase tracking-wider text-brand-sage">
                     {product.benefit}
                   </span>
+
                   <Link to={`/product/${product.id}`}>
-                    <h3 className="font-serif text-lg font-medium leading-tight group-hover:text-brand-green transition-colors line-clamp-2">
+                    <h3 className="line-clamp-2 font-serif text-lg font-medium leading-tight transition-colors group-hover:text-brand-green">
                       {product.name}
                     </h3>
                   </Link>
-                  <div className="mt-auto pt-4 flex items-center justify-between">
+
+                  <div className="mt-auto flex items-center justify-between pt-4">
                     <span className="text-lg font-medium text-brand-ink">
                       {product.price}
                     </span>
@@ -244,7 +260,7 @@ export function Home() {
                       size="sm"
                       className="rounded-full px-4"
                     >
-                      Add to Cart
+                      Sepete Ekle
                     </Button>
                   </div>
                 </div>
@@ -255,10 +271,10 @@ export function Home() {
       </section>
 
       {/* Editorial Section */}
-      <section className="py-24 bg-brand-sand">
+      <section className="bg-brand-sand py-24">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid gap-12 md:grid-cols-2 items-center">
-            <div className="order-2 md:order-1 relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-2xl md:order-1">
               <img
                 src="https://picsum.photos/seed/editorial/1000/800"
                 alt="Rituel Moments"
@@ -266,21 +282,24 @@ export function Home() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="order-1 md:order-2 flex flex-col items-start gap-6 md:pl-12">
-            <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
-  Bakımın <br />
-  <span className="italic text-brand-green">
-    Ritüel Hali
-  </span>
-</h2>
-<p className="text-lg text-brand-ink/70 leading-relaxed">
-  Rituel de Beauté, cilt bakımını sıradan bir rutin olmaktan çıkarıp
-  keyifli bir deneyime dönüştürür. Profesyonel etkili ürünlerimiz,
-  evinizin konforunda bakım hissini yeniden tanımlar.
-</p>
-<Button variant="outline" size="lg" className="mt-4">
-  Hikayemizi Keşfet
-</Button>
+
+            <div className="order-1 flex flex-col items-start gap-6 md:order-2 md:pl-12">
+              <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
+                Bakımın <br />
+                <span className="italic text-brand-green">
+                  Ritüel Hali
+                </span>
+              </h2>
+
+              <p className="text-lg leading-relaxed text-brand-ink/70">
+                Rituel de Beauté, cilt bakımını sıradan bir rutin olmaktan çıkarıp
+                keyifli bir deneyime dönüştürür. Profesyonel etkili ürünlerimiz,
+                evinizin konforunda bakım hissini yeniden tanımlar.
+              </p>
+
+              <Button variant="outline" size="lg" className="mt-4">
+                Hikayemizi Keşfet
+              </Button>
             </div>
           </div>
         </div>
